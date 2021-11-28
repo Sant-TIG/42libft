@@ -27,7 +27,7 @@
   DESCRIPTION
   ***********
   The function ft_atoi() mimics the behavior of the atoi() function from
-  <stdlib.h> library. Both functioncs converts the string pointed to by
+  <stdlib.h> library. Both functions convert the string pointed to by
   str to int. The behaviour is the same as "strtol(str, NULL, 10);" except
   that it detect errors.
 
@@ -37,8 +37,8 @@
 
   RETURN VALUE
   ************
-  This function returns the converted value as an int valuye. If there is
-  a problem returns zero.
+  This function returns the converted value as an int value. If there is
+  an error returns zero.
 
   BUGS
   ****
@@ -49,7 +49,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int		result;
+	int	result;
 	ssize_t	sign;
 
 	result = 0;
