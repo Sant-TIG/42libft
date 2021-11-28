@@ -10,11 +10,47 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <unistd.h>
+
+/*
+  NAME
+  ****
+  ft_atoi ---> array to integer
+
+  SYNOPSIS
+  ***********
+  #include <stdlib.h>
+  int	atoi(const char *str);
+  #include "libft.h"
+  int	ft_atoi(const char *str);
+
+  DESCRIPTION
+  ***********
+  The function ft_atoi() mimics the behavior of the atoi() function from
+  <stdlib.h> library. Both functioncs converts the string pointed to by
+  str to int. The behaviour is the same as "strtol(str, NULL, 10);" except
+  that it detect errors.
+
+  PARAMETERS
+  **********
+  str ---> The string representation of an integral number.
+
+  RETURN VALUE
+  ************
+  This function returns the converted value as an int valuye. If there is
+  a problem returns zero.
+
+  BUGS
+  ****
+  errno is not set on error so there is no way to distinguish between 0 as
+  an error and as as the converted value. No check for overflow or underflow
+  are done. Only base-10 input can be converted.
+*/
 
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	sign;
+	int		result;
+	ssize_t	sign;
 
 	result = 0;
 	sign = 1;
