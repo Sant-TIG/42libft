@@ -20,6 +20,7 @@ SYNOPSIS
 ********
 #include "libft.h"
 char	*ft_strtrim(const char *str, char const *set)
+
 PARAMETERS
 **********
 str   ---> the to string to trim
@@ -32,7 +33,6 @@ the beginning and the end of the string 's1'. It does not matter the order in wh
 they appear or if they appear repeated, they are trimmed as long as they are at the 
 beginning or at the end of the string 'str'. Whether it finds a different character
 at the beginning or at the end, it stops looking for it corresponding side.
-
 
 RETURN VALUE
 ************
