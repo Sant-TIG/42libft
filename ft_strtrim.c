@@ -10,17 +10,46 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-char	*ft_strtrim(const char *s1, char const *set)
+
+/*
+NAME
+****
+ft_strtrim ---> trim a set of characters from a string
+
+SYNOPSIS
+********
+#include "libft.h"
+char	*ft_strtrim(const char *str, char const *set)
+PARAMETERS
+**********
+str   ---> the to string to trim
+start ---> the set of characters to trim
+
+DESCRIPTION
+***********
+The ft_strtrim() function removes any character from the string 'set' from both
+the beginning and the end of the string 's1'. It does not matter the order in which
+they appear or if they appear repeated, they are trimmed as long as they are at the 
+beginning or at the end of the string 'str'. Whether it finds a different character
+at the beginning or at the end, it stops looking for it corresponding side.
+
+
+RETURN VALUE
+************
+- A pointer to the trimmed string.
+- If any of the parameters are NULL, it returns NULL.
+*/
+
+char	*ft_strtrim(const char *str, char const *set)
 {
 	size_t	end;
 
-	if (!s1 || !set)
+	if (!str || !set)
 		return (NULL);
-	while (*s1 != '\0' && ft_strchr(set, *s1))
-		s1++;
-	end = ft_strlen(s1);
-	while (end && ft_strchr(set, s1[end]))
+	while (*str != '\0' && ft_strchr(set, *str))
+		str++;
+	end = ft_strlen(str);
+	while (end && ft_strchr(set, str[end]))
 		end--;
-	return (ft_substr(s1, 0, end + 1));
+	return (ft_substr(str, 0, end + 1));
 }
