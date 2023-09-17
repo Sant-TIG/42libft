@@ -49,7 +49,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i--)
 	{
 		if (*(s + i) == (char)c)
-			return (&(s + i);
+			return (s + i);
 	}
 	return (NULL);
 }
